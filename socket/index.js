@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
     socket.on("addUser", (userId) => {
         addUser(userId, socket.id);
         io.emit("getUsers", users);
-        console.log('connect : ',{users});
+        //console.log('connect : ',{users});
     });
     //send and get message
     socket.on("sendMessage", ({ chat_id, deleted, img, profilePic, sentTime, userSend_id, receiverId, text }) => {
